@@ -104,10 +104,7 @@ args = parser.parse_args()
 
 tracks_filepath = abspath(args.tracks[0])
 
-if args.channel == 1:
-    channel = 'ch1'
-elif args.channel == 2:
-    channel = 'ch2'
+channel = 'ch' + str(args.channel)
 
 timestamp_epoch = round(time())
 timestamp_hash = _epoch_to_hash(timestamp_epoch)
